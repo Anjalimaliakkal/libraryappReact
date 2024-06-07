@@ -3,14 +3,19 @@ import './App.css';
 import AddBooks from './components/AddBooks';
 import SearchBooks from './components/SearchBooks';
 import DeleteBooks from './components/DeleteBooks';
+import ViewAll from './components/ViewAll';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-      <AddBooks/>
-      <SearchBooks/>
-      <DeleteBooks/>
-    </div>
+   <BrowserRouter>
+   <Routes>
+    <Route path='/' element={<AddBooks/>}/>
+    <Route path='/search' element={<SearchBooks/>}/>
+    <Route path='/delete' element={<DeleteBooks/>}/>
+    <Route path='/viewAll' element={<ViewAll/>}/>
+   </Routes>
+   </BrowserRouter>
   );
 }
 

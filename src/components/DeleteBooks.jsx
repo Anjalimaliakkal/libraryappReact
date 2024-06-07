@@ -1,8 +1,10 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 const DeleteBooks = () => {
     return (
         <div>
+            <NavBar/>
             <h1><center>DELETE BOOKS</center></h1>
             <div className="container">
                 <div className="row">
